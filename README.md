@@ -3,6 +3,15 @@
   
   Finally, nn.LSTM model developed to use the capabilities of LSTM algorithm with long-term time-dependencies. Nn.LSTM Time-series model achieved better (less rmse) performance compared to fine-tuned XGBM model. Below you can find the model architecture. 48-hour back-horizon is used to predict horizon of +1.  
   
+## Data Description
+| Variable Name | Description |
+|---------------|-------------|
+| PTF | Market Clearing Price is the hourly energy price that is determined with respect to orders that are cleared according to total supply and demand| 
+| Volume| In the Day Ahead Market, it is the hourly total financial value of the matching bids. (Matching bid = Matching Offer)|
+| bid_amount| Sum of hourly, block and flexible bid order volumes at 0 TL/MWh price step.|
+| ask_amount| Sum of hourly, block and flexible sales order volumes at 4800 TL/MWh price step.|
+| imbalance_delta| Imbalance Quantity|
+  
 ## Model Architecture  
 ![image](https://github.com/dfavenfre/electricity-price-forecasting/assets/118773869/9ee3babe-8637-4a73-809b-5a1ec91d2e6f) 
 
